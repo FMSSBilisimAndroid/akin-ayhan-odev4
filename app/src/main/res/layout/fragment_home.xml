@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="adapter"
+            type="com.akinayhan.week4homework.adapter.MarsAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.HomeActivity">
+
+        <TextView
+            android:id="@+id/txt_home_mars"
+            android:layout_width="167dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="1dp"
+            android:gravity="center_horizontal|top"
+            android:lineSpacingExtra="25sp"
+            android:text="@string/mars_estate"
+            android:textAppearance="@style/mars_estate"
+            android:translationY="-12.64sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:adapter="@{adapter}"
+            app:layout_constraintBottom_toTopOf="@+id/bars_tab_ba"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_home_mars"
+            tools:listitem="@layout/recycler_item" />
+
+        <RelativeLayout
+            android:id="@+id/bars_tab_ba"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bars_tab_ba"
+            android:elevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/partials1"
+                android:layout_width="75dp"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toStartOf="@+id/partials2"
+                android:background="@drawable/partials1"
+                android:contentDescription="@string/todo5"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/partials2"
+                android:layout_width="75dp"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toStartOf="@+id/partials3"
+                android:background="@drawable/partials2"
+                android:contentDescription="@string/partials2" />
+
+            <ImageView
+                android:id="@+id/partials3"
+                android:layout_width="75dp"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toStartOf="@+id/partials4"
+                android:background="@drawable/partials3"
+                android:contentDescription="@string/partials3" />
+
+            <ImageView
+                android:id="@+id/partials4"
+                android:layout_width="75dp"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toStartOf="@+id/partials5"
+                android:background="@drawable/partials4"
+                tools:ignore="ImageContrastCheck"
+                android:contentDescription="@string/partials4" />
+
+            <ImageView
+                android:id="@+id/partials5"
+                android:layout_width="75dp"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/partials5"
+                android:contentDescription="@string/partials5"
+                tools:ignore="ImageContrastCheck" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

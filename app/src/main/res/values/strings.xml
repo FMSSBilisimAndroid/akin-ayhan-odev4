@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Week4 Homework</string>
+
+    <string name="mars_estate">MARS ESTATE</string>
+    <string name="let_s_explo">Let\'s Explore the \nSolar System\nwith Explorer</string>
+    <string name="get_started">Get Started</string>
+    <string name="todo">TODO</string>
+
+    <string name="for_rent">For Rent</string>
+    <string name="some_price">65.00$</string>
+    <string name="some_id">498547</string>
+    <string name="for_sale">For Sale</string>
+
+
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo5">TODO</string>
+    <string name="partials5">TODO</string>
+    <string name="partials3">TODO</string>
+    <string name="partials2">TODO</string>
+    <string name="partials4">TODO</string>
+    <string name="buy_now_be_">BUY NOW, BE A MARTIAN\u000D\n</string>
+    <string name="buy_now">Buy Now</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

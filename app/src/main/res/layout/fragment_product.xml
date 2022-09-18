@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="marsList"
+            type="com.akinayhan.week4homework.model.MarsModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProductFragment">
+
+        <ImageView
+            android:id="@+id/rectangle_5"
+            android:layout_width="375dp"
+            android:layout_height="384dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:downloadImageUrl="@{marsList.imgSrc}"
+            android:contentDescription="@string/todo2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+        <View
+            android:id="@+id/line_4"
+            android:layout_width="330dp"
+            android:layout_height="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_5" />
+
+        <ImageView
+            android:id="@+id/plot_2"
+            android:layout_width="34dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/location_image"
+            android:contentDescription="@string/todo1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_4"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/some_id"
+            android:layout_width="78dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal|top"
+            android:lineSpacingExtra="10sp"
+            android:text="@{marsList.id}"
+            android:textAppearance="@style/some_id"
+            android:translationY="-4.92sp"
+            app:layout_constraintStart_toEndOf="@+id/plot_2"
+            app:layout_constraintTop_toBottomOf="@+id/line_4" />
+
+        <TextView
+            android:id="@+id/some_price"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="top"
+            android:lineSpacingExtra="9sp"
+            android:text="@{Integer.toString(marsList.price)}"
+            android:textAppearance="@style/some_id"
+            android:translationY="-4.28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_4" />
+
+        <TextView
+            android:id="@+id/for_sale"
+            android:layout_width="91dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="top"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/for_rent"
+            android:textAppearance="@style/for_rent"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:translationY="-3.36sp"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_5"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_5"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/buy_now_be_"
+            android:layout_width="330dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/buy_now_be_"
+            android:textAppearance="@style/buy_now_be_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/some_id" />
+
+        <Button
+            android:id="@+id/frame_25"
+            android:layout_width="128dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/product_button"
+            android:text="@string/buy_now"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_now_be_" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
